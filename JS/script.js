@@ -424,6 +424,6 @@ document.querySelector('form').addEventListener('submit', function(e){
         console.log('credit card not formatted correctly');
     }
 
-    e.preventDefault();
+    
    
 });
