@@ -287,85 +287,42 @@ function paymentValidation() {
         if (!reCard.test(cardValue) || !reZip.test(zip.value) || !reCvv.test(cvv.value)) {
             
             if (!reCard.test(cardValue) && !reZip.test(zip.value) && !reCvv.test(cvv.value)) {
-                card.style.borderColor = 'red';
-                zip.style.borderColor = 'red';
-                cvv.style.borderColor = 'red'
-                divCard.style.display = '';
+               divCard.style.display = '';
                 divCard.textContent = 'Please enter valid information below.';
                 return false;
             }
 
                 if (!reCard.test(cardValue) && !reZip.test(zip.value)) {
-                    card.style.borderColor = 'white';
-                    zip.style.borderColor = 'white';
-                    cvv.style.borderColor = 'white';
-                    card.style.borderColor = 'red';
-                    zip.style.borderColor = 'red';
-                    cvv.style.borderColor = 'white';
                     divCard.style.display = '';
                     divCard.textContent = '*Please enter a valid Credit Card & ZIP number.'
                     return false;
                 }else if (!reZip.test(zip.value) && !reCvv.test(cvv.value)) {
-                    card.style.borderColor = 'white';
-                    zip.style.borderColor = 'white';
-                    cvv.style.borderColor = 'white';
-                    zip.style.borderColor = 'red';
-                    card.style.borderColor = 'white';
-                    cvv.style.borderColor = 'red';
                     divCard.style.display = '';
                     divCard.textContent = '*Please enter valid ZIP & CVV number.';
                     return false;
                 }else if (!reCvv.test(cvv.value) && !reCard.test(cardValue)) {
-                    card.style.borderColor = 'white';
-                    zip.style.borderColor = 'white';
-                    cvv.style.borderColor = 'white';
-                    cvv.style.borderColor = 'red';
-                    zip.style.display = 'white';
-                    card.style.borderColor = 'red';
                     divCard.style.display = '';
                     divCard.textContent = '*Please enter valid Credit Card and CVV number.';
                     return false;
                 }else if (!reCard.test(cardValue)){
-                    card.style.borderColor = 'white';
-                    zip.style.borderColor = 'white';
-                    cvv.style.borderColor = 'white';
-                    card.style.borderColor = 'red';
-                    zip.style.borderColor = 'white';
-                    cvv.style.borderColor = 'white';
                     divCard.style.display = '';
                     divCard.textContent = 'Please enter a Card number between 13 and 16 digits';
                     return false;
                 }else if (!reZip.test(zip.value)) {
-                    card.style.borderColor = 'white';
-                    zip.style.borderColor = 'white';
-                    cvv.style.borderColor = 'white';
-                    zip.borderColor = 'red';
-                    card.style.borderColor = 'white';
-                    cvv.style.borderColor = 'white';
                     divCard.style.display = '';
                     divCard.textContent = '*Please enter a five digit ZIP.'
                     return false;
                 }else if (!reCvv.test(cvv.value)) {
-                    card.style.borderColor = 'white';
-                    zip.style.borderColor = 'white';
-                    cvv.style.borderColor = 'white';
-                    cvv.style.borderColor = 'red';
-                    zip.style.borderColor = 'white';
-                    card.borderColor = 'white';
-                    divCard.style.display = '';
+                   divCard.style.display = '';
                     divCard.textContent = '*Please enter a three digit CVV.';
                     return false;
                 }else {
-                    card.style.borderColor = 'white';
-                    zip.style.borderColor = 'white';
-                    cvv.style.borderColor = 'white';
-                    divCard.style.display = 'none';
+                   divCard.style.display = 'none';
                     return true;
                 }
             
         }else {
             console.log('success');
-            card.style.borderColor = 'white';
             divCard.style.display = 'none';
             return true;
         }
