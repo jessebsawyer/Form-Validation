@@ -204,6 +204,7 @@ document.getElementById('mail').addEventListener('keyup', (e) => {
     } 
 });
 
+// Check if Other Title Field Is Showing And/Or Filled In
 function otherTitle () {
     const other = document.getElementById('other-title');
     const otherValue = other.value;
