@@ -255,10 +255,6 @@ function activitiesValidation () {
     }else {
         legend.style.color = 'red'
         legend.textContent = 'Please Select at Least One';
-        // setTimeout(function (){
-        //     legend.style.color = 'rgba(6, 49, 68, 0.9)';
-        //     legend.textContent = 'Register for Activities';
-        // },5000);
         return false;
     }
 }
